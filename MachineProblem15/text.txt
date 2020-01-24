@@ -1,0 +1,46 @@
+15
+2442
+Kapowski, Kelly
+87 99 100 87 88 -99
+1254
+Slater, A.C.
+90 100 -99
+8742
+Morris, Zack
+77 65 50 80 66 -99
+9642
+Powers, Screech
+100 100 100 100 100 -99
+7625
+Spano, Jesse
+88 85 92 78 76 23 -99
+9199
+Turtle, Lisa
+88 97 77 76 88 -99
+3412
+Scott, Tori
+56 77 60 62 -99
+1234
+Coleman, Nikki
+80 90 92 87 79 77 -99
+8753
+Carosi, Stacey
+88 99 100 78 65 -99
+5342
+Bickerstaff, Violet
+100 99 98 97 100 -99
+6642
+Barnes, Kristy
+66 77 82 84 82 -99
+1001
+Ox
+12 11 34 0 0 -99
+7421
+Carla
+88 34 89 92 73 -99
+7723
+Peterson, Joanna
+70 78 -99
+8111
+Parks, Wendy
+88 60 76 80 75 -99
