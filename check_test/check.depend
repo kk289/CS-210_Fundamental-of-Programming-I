@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1509009170 source:f:\college\fall 2017\cs 210\check\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
