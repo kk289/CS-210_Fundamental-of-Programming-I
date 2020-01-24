@@ -1,0 +1,161 @@
+/*
+ * Swiss Tournament manager
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX 100
+
+/*Function Parameters*/
+void print_greeting();
+void print_pl_r(int *num_players, int *rounds);
+void print_standings(int round_number, int id_number,
+                     int wins, int losses, int count);
+int record_round(int count, int round, int player_1, int player_2);
+void selection_sort(int id_player[], int wins[], int losses[],
+                    int num_players);
+
+int main()
+{
+    int num_players, rounds;
+    int id_player[MAX];
+    int wins[MAX];
+    int losses[MAX];
+    int round_number = 1;
+    int count = 0;
+    int winner;
+    int a = 0;
+
+    print_greeting();
+
+    /*Asks for number of players and rounds */
+    print_pl_r(&num_players, &rounds);
+
+    /*Stores the id number in the array*/
+    id_player[0] = 1001;
+    wins[0] = 0;
+    losses[0] = 0;
+    for (int i = 1; i < num_players; i++){
+        id_player[i] = id_player[i-1] + 1;
+        wins[i] = 0;
+        losses[i] = 0;
+    }
+
+    do{
+        count = 0;
+        a = 0;
+        while(a < num_players){
+            winner = record_round(count, round_number,  id_player[a],
+                                  id_player[a+1]);
+            count = 1;
+            if (winner == 1){
+                wins[a] = wins[a] +1;
+                losses[a+1]++;
+            } else if (winner == 2){
+                wins[a+1] = wins[a+1] +1;
+                losses[a]++;
+            }
+            a = a + 2;
+        }
+        int count_print = 0;
+        selection_sort(id_player, wins, losses, num_players);
+        for (int j = 0; j < num_players; j++){
+            print_standings(round_number, id_player[j], wins[j],
+                            losses[j], count_print);
+            count_print = 1;
+        }
+        round_number++;
+    } while (round_number <= rounds);
+
+    return 0;
+}
+
+/*Function Declarations*/
+/*This function prints the greeting*/
+void print_greeting(){
+    printf("Swiss Tournament Manager\n");
+    printf("------------------------\n");
+}
+/*This function takes the input of number of players and rounds*/
+void print_pl_r(int *num_players, int *rounds){
+    int rem;
+
+    do{
+        printf("Enter number of participants (must be even):");
+        scanf("%d", &*num_players);
+        rem = *num_players % 2;
+        if (*num_players < 2){
+            printf("Must be at least 2. Try again.\n");
+        }else if (*num_players > 64){
+            printf("Must be less than 64. Try again.\n");
+        }else if (rem == 1){
+            printf("Must be even. Try again.\n");
+        }
+    }while (rem || *num_players < 2 || * num_players > 64 );
+
+    do{
+        printf("Enter the number of rounds to play:");
+        scanf("%d", &*rounds);
+        if (*rounds < 1){
+            printf("Must play at least 1 round. Try Again.\n");
+        }
+    }while (*rounds < 1);
+}
+/*This function prints the current standings of players*/
+void print_standings(int round_number, int id_number,
+                     int wins, int losses, int count){
+    if (count == 0){
+        printf("Standings after round %d\n\n", round_number);
+        printf("Player ID    Record\n");
+        printf("---------    ------\n");
+    }
+    printf("    %d       %d-%d\n", id_number, wins, losses);
+}
+
+/*This function prints and finds out which player won*/
+int record_round(int count, int round, int player_1, int player_2){
+    int winner;
+    if (count == 0){
+        printf("Enter results from round %d\n", round);
+    }
+    do{
+        printf("Who won?\n");
+        printf("1) %d or 2) %d:", player_1, player_2);
+        scanf("%d", &winner);
+        if (winner != 1 && winner != 2){
+            printf("Select 1 or 2. Try again.\n");
+        }
+
+    }while(winner !=1 && winner != 2);
+
+    return winner;
+}
+/*This function sorts the players according to wins*/
+void selection_sort(int id_player[], int wins[], int losses[],
+                    int num_players)
+{
+    int max_index = 0;
+
+    for(int j = 0; j < num_players; j++){
+        max_index = j;
+        for (int i = j; i < num_players; i++){
+            if (wins[i] > wins[max_index]){
+                max_index = i;
+            }else if (wins[i] == wins[max_index]){
+                if (id_player[i] > id_player[max_index]){
+                    max_index = i;
+                }
+            }
+        }
+        /*swap values*/
+    int temp_wins = wins[j];
+    int temp_player = id_player[j];
+    int temp_losses = losses[j];
+    id_player[j] = id_player[max_index];
+    wins[j] = wins[max_index];
+    losses[j] = losses[max_index];
+    id_player[max_index] = temp_player;
+    wins[max_index] = temp_wins;
+    losses[max_index] = temp_losses;
+    }
+}
