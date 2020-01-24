@@ -18,22 +18,32 @@ Projects Listed:
 14. Fraction Problem
 15. The Game of NIM
 16. Swiss Tournament Manager
-17. MachineProblem1	- Easter Calculator
-18. MachineProblem2 - Rock Paper Scissor
-19. MachineProblem3 -	The Ancient Game of Nim	
-20. MachineProblem4	- Swiss Tournament Manager
-21. MachineProblem5	- Mad Libs
-22. MachineProblem6	- Vector Library
-23. MachineProblem8	- Cards
-24. MachineProblem9	- No Suck String
-25. Maze Game - Maze Runner
-26. Project1 - Mileage Reimbursement calculator
-27. Project2 - Grading Calculator
-28. Project3 - To ask user for a day, a month, year
-29. Project4 - To calculate the exponential function
-30. Project5 - Tic Tac Toe
-31. Recrusion	Topic: Recursion
-32. String_class	Topic: String Class
-33. String_function	Topic: String Function
-34. Prime Number Calculator
-35. Topic: Pointer
+17. Recrusion	Topic: Recursion
+18. String_class	Topic: String Class
+19. String_function	Topic: String Function
+20. Prime Number Calculator
+21. Topic: Pointer
+22. Monthly Payment Calculator
+23. KMS_PER_MILE - Convert KM to Miles
+24. Maze Game - Maze Runner
+25. MachineProblem1	- Easter Calculator
+26. MachineProblem2 - Rock Paper Scissor
+27. MachineProblem3 -	The Ancient Game of Nim	
+28. MachineProblem4	- Swiss Tournament Manager
+29. MachineProblem5	- Mad Libs
+30. MachineProblem6	- Vector Library
+31. MachineProblem7	- Survior Logistics Planner
+32. MachineProblem8	- Cards
+33. MachineProblem9	- No Suck String
+34. MachineProblem10 - Sunrise, Sunset
+35. MachineProblem11 - Reverse Guessing Game
+36. MachineProblem12 - Zombie Infection Model
+37. MachineProblem13 - Rational Number
+38. MachineProblem14 - Zombie Translator
+39. MachineProblem15 - The Automated Grade Book Program
+40. MachineProblem16 - Zombie Voting Right Act of 2017
+41. Project1 - Mileage Reimbursement calculator
+42. Project2 - Grading Calculator
+43. Project3 - To ask user for a day, a month, year
+44. Project4 - To calculate the exponential function
+45. Project5 - Tic Tac Toe
