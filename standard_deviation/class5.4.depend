@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1505425960 source:f:\college\fall 2017\cs 210\class5.4\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
