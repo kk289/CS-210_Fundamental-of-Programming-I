@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1509051600 source:f:\college\fall 2017\cs 210\structure\main.c
+	<stdio.h>
+	<stdlib.h>
+	"complex.h"
+	"main.h"
+	"complex.h"
+
+1509051600 source:f:\college\fall 2017\cs 210\structure\complex.c
+	"complex.h"
+	<math.h>
+	<stdio.h>
+
+1509051600 f:\college\fall 2017\cs 210\structure\complex.h
+
+1509049758 f:\college\fall 2017\cs 210\structure\main.h
+
