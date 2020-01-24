@@ -1,0 +1,59 @@
+#ifndef MACHINEPROBLEM9_HEADERFILE_H_INCLUDED
+#define MACHINEPROBLEM9_HEADERFILE_H_INCLUDED
+
+/* No Suck Strings
+ *
+ * This library provides string functions that do not have
+ * size limitations, are safe from overflows, and are
+ * compatible with standard c strings */
+
+#include <stdlib.h>
+#include <stdio.h>
+
+/* type alias for nss */
+typedef char* nss;
+
+/* public API */
+/
+/* nss_empty - returns a newly-allocated nss with a length of 0 */
+nss nss_empty();
+
+/* nss_from_cstr - Given a standard C string, returns a newly-allocated
+ *                 nss with the same contents as str */
+nss nss_from_cstr(char* str);
+
+/* nss_free - given an nss, return the allocated storage to the heap */
+void nss_free(nss str);
+
+/* nss_len - given an nss, return its length.
+ *           (Note: this should work in constant time (no loop)) */
+size_t nss_len(nss s);
+
+/* nss_cpy - copy the contents of src into dest and return a pointer to dest */
+nss nss_cpy(nss dest, nss src);
+
+/* nss_cat - append the contents of src to dest and return a pointer to dest */
+nss nss_cat(nss dest, nss src);
+
+/* nss_catchar - append a single character to the end of dest
+                 and return a pointer to dest */
+nss nss_catchar(nss dest, char ch);
+
+/* nss_cmp - compare the strings a and b.
+ *           Return -1 if a < b, 0 if a == b, 1 if a > b */
+int nss_cmp(nss a, nss b);
+
+/* nss_substr - return a newly allocated nss with the substring of
+ *              s starting at index start and having length len */
+nss nss_substr(nss s, size_t start, size_t len);
+
+/* fgetnss - get a line from the file f and store it in the nss, s
+ *           does NOT keep the newline character in the result */
+nss fgetnss(nss s, FILE* f);
+
+
+#endif
+
+
+
+#endif
