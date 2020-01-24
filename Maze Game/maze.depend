@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1511901746 source:f:\college\fall 2017\cs 210\maze\main.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+
